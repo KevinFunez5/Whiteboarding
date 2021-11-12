@@ -9,3 +9,20 @@ Output: false
 Input: "copyright"
 
 Output: true
+
+https://www.geeksforgeeks.org/determine-string-unique-characters/
+
+function uniqueCharacters(str)
+{
+    // If at any time we encounter 2
+    // same characters, return false
+    for(let i = 0; i < str.length; i++)
+        for(let j = i + 1; j < str.length; j++)
+            if (str[i].toLowerCase() == str[j].toLowerCase())
+                return false;
+    // If no duplicate characters
+    // encountered, return true
+    return true;
+}
+
+a function that loops through a string, within that loop its comparing the next letter ahead of that index in the first loop. if 2 letters match itll return false and if not than itll return true
