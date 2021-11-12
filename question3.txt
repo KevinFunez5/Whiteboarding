@@ -25,3 +25,24 @@ first ill make a output with an empty string to push the result into. Ill make a
 
 
 add to the output current counter number + the index youre on and then reset counter to one so that your next character counter is back at 1
+
+With recursion
+
+
+const compressingStrings = (string, i = 0, counter = 0, newString = "") => {
+	if (i > string.length) {
+		return newString;
+	} else if (string[i+1] === string[i]) {
+		counter++;
+		return compressingStrings(string, i + 1, counter, newString)
+	} else {
+		if (counter === 0) {
+			newString += string[i]
+			return compressingStrings(string, i + 1, counter, newString)
+		} else {
+			counter++
+			newString = newString + counter + string[i]
+			return compressingStrings(string, i + 1, counter = 0, newString)
+		}
+	}
+} 
