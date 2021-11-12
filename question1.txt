@@ -20,3 +20,5 @@ function createURL(str){
 }
 
 split methods returns an array of subtrings and the join method replaces those substrings with the string "%20"
+
+"Here I want to start by writing a function that will figure out the empty spaces and add the string "%20" in those empty spaces. in the function ill make a variable that takes the str passed into the function and splits the empty spaces(" ") then will join or add the string "%20"."
